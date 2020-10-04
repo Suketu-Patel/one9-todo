@@ -100,9 +100,16 @@ function Todo() {
                 autoFocus
               />
               :
-              <div onDoubleClick={() => {
-                !editingMode && setEditMode(todo, true)
-              }}>{todo.text}</div>
+              !todo.isCompleted ?
+                <div onDoubleClick={() => {
+                  !editingMode && setEditMode(todo, true)
+                }}>
+                  {todo.text}
+                </div>
+                :
+                <div>
+                  {todo.text}
+                </div>
             }
             <div style={{ display: "flex" }}>
               <div
