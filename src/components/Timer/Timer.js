@@ -6,7 +6,7 @@ function Timer() {
     let id = setInterval(() => {
       setTimer(timer + 1);
     }, 1000);
-    return clearInterval(id); 
+    return () => clearInterval(id); 
   }, [timer])
   return(
     <div>
