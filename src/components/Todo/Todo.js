@@ -42,7 +42,7 @@ function Todo() {
             onChange={(e) => setTodoText(e.target.value)}
           ></input>
         </div>
-        <div style={{ margin: "0px 10px" }}>
+        <div style={{ margin: "0px 10px", cursor: 'pointer'}}>
           <input type="button" value="ADD TODO" onClick={addTodo}></input>
         </div>
       </div>
